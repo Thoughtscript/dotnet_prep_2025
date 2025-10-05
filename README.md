@@ -24,7 +24,7 @@
 
 **Visual Studio's** gotten much easier to configure and install over the years:
 1. Open **Visual Studio Installer** and select **Modify**.
-1. Key dependencies include:
+2. Key dependencies include:
    * `MSVC v143 ...`
    * `Windows 11 SDK...` (Node Gyp distributions sometimes require these)
    * `MSBuild`
@@ -37,7 +37,10 @@
    * `C++ CMake tools ...`
    * `C++/CLI support v143 build tools...`
    * etc.
-1. Not installing those may cause issues with various tools/dependencies from outside C# and Dotnet depending on various 3rd-party installation configurations:
+3. Depicted:
+   * ![](_screen_captures/visual_studio_installer_deps_1.png)
+   * ![](_screen_captures/visual_studio_installer_deps_2.png)  
+4. Not installing those may cause issues with various tools/dependencies from outside C# and Dotnet depending on various 3rd-party installation configurations:
    * C++
    * Git CLI 
    * Python

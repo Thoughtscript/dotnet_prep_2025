@@ -6,41 +6,6 @@
 [![](https://img.shields.io/badge/VisualStudio-2022-blue.svg)](https://visualstudio.microsoft.com/vs/community/) 
 [![](https://img.shields.io/badge/PowerShell-17.14.16-blue.svg)](https://learn.microsoft.com/en-us/powershell/) 
 
-## Visual Studio
-
-1. Obtain a PowerShell Terminal: 
-	* **View** > **Terminal**
-1. Main View I like to use: 
-	* **View** > **Solution Explorer**
-
-
-The steps below will setup and configure a new **Solution** from scratch.
-1. One can open and navigate to the **Solution** file (`.sln`).
-1. Then **Build** and **Run** the **Solution** from within **Visual Studio 2022**.
-
-## CLI Commands
-
-```shell
-# Create new Solution File
-## Don't append an extra .sln here 
-## it will cause the Solution to break
-dotnet new sln --name mysolution
-
-# Create new project
-cd src
-dotnet new console --language "C#"
-## This creates a Terminal Console app 
-## that will open a Window when built and run
-
-# Add Project to Solution
-cd ../
-dotnet sln add src
-
-# Version
-dotnet --version 
-## 9.0.305
-```
-
 ## .NET Ecosystem 2025
 
 1. **Application Server Pages** (**ASP**)
@@ -55,7 +20,41 @@ dotnet --version
 	* Object Relation Mappings.
 	* Akin to Java Entity JPA Hibernate.
 
+### Visual Studio
 
+1. Obtain a PowerShell Terminal: 
+	* **View** > **Terminal**
+1. Main View I like to use: 
+	* **View** > **Solution Explorer**
+
+The steps below will setup and configure a new **Solution** from scratch.
+1. One can open and navigate to the **Solution** file (`.sln`).
+1. Then **Build** and **Run** the **Solution** from within **Visual Studio 2022**.
+
+### CLI Commands
+
+From within **Visual Studio** (using the steps above):
+
+```shell
+# Version
+dotnet --version 
+## 9.0.305
+
+# Create new Solution File
+## Don't append an extra .sln here 
+## it will cause the Solution to break
+dotnet new sln --name mysolution
+
+# Create new project
+cd src
+dotnet new console --language "C#"
+## This creates a Terminal Console app 
+## that will open a Window when built and run
+
+# Add Project to Solution
+cd ../
+dotnet sln add src
+```
 
 ## Language Overview
 

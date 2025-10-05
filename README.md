@@ -22,12 +22,38 @@
 
 ### Visual Studio
 
+**Visual Studio's** gotten much easier to configure and install over the years:
+1. Open **Visual Studio Installer** and select **Modify**.
+1. Key dependencies include:
+   * `MSVC v143 ...`
+   * `Windows 11 SDK...` (Node Gyp distributions sometimes require these)
+   * `MSBuild`
+   * `C# and Visual Basic`
+   * `.NET 9.0 Runtime`
+   * `.NET SDK`
+   * `C# and Visual Basic Rosyln compilers`
+   * `C++ core features`
+   * `NuGet package manager`
+   * `C++ CMake tools ...`
+   * `C++/CLI support v143 build tools...`
+   * etc.
+1. Not installing those may cause issues with various tools/dependencies from outside C# and Dotnet depending on various 3rd-party installation configurations:
+   * C++
+   * Git CLI 
+   * Python
+   * Node
+   * Node-Gyp
+
+#### Key Commands
+
 1. Obtain a PowerShell Terminal: 
 	* **View** > **Terminal**
-1. Main View I like to use: 
+2. Main View I like to use: 
 	* **View** > **Solution Explorer**
 
-The steps below will setup and configure a new **Solution** from scratch.
+#### Use
+
+The steps in the section below will setup and configure a new **Solution** from scratch.
 1. One can open and navigate to the **Solution** file (`.sln`).
 1. Then **Build** and **Run** the **Solution** from within **Visual Studio 2022**.
 

@@ -47,18 +47,20 @@
    * Node
    * Node-Gyp
 
-#### Key Commands
+#### Key Visual Studio Views
 
 1. Obtain a PowerShell Terminal: 
 	* **View** > **Terminal**
 2. Main View I like to use: 
 	* **View** > **Solution Explorer**
+	* Select the **Show All Files** icon on the right (three papers) to see all Directories and Files (including empty ones).
 
 #### Use
 
 The steps in the section below will setup and configure a new **Solution** from scratch.
 1. One can open and navigate to the **Solution** file (`.sln`).
 1. Then **Build** and **Run** the **Solution** from within **Visual Studio 2022**.
+
 
 ### CLI Commands
 
@@ -87,8 +89,50 @@ dotnet sln add src
 
 ## Language Overview
 
+**Top Level Statements** 
+
+> New in .NET 9.
+
+1. It must be within the entrypoint (`Main` **Method**, `Program.cs` **File** and **Class**).
+1. Eliminates the ceremony of writing a `Program` Class or `Main` **Method**.	 
+   * Cannot be used with `Main` **Method**.
+   * Only one **File** containing these is allowed per **Project**.
+1. `using` **Directives** must come first.
+1. They cannot be imported/exported.
+
 ### Vs. Java
 
+1. `virtual` and **Overloading**
+	* In Java, **Methods** can be `@Overridden` by default.
+	* In .NET, only `virtual` **Methods** can be.
+2. `struct` vs `record`
+	* `struct` can be deep or shallow.
+	* `struct` can be `readonly`
+3. `var` 
+	* In Java, this is the default Variable declaration keyword.
+	* In .NET, this is for a locally-scoped Variable declaration (akin to `let` in JavaScript).
+	* It's also implicitly typed in .NET (omitting the need to explicitly state the type).
+4. `const` vs. `var static final ...`
+	* In Java, an immutable Variable is defined using the `final` keyword.
+	* In .NET, `const` is used instead (like JavaScript).
+5. Visibility
+	* Java: `public`, `protected`, `package` (default), `private`. Also, `sealed`.
+	* .NET: far more combinations for greater granularity and Access Control.
+		* TODO
+6. Pass by Value and Reference
+	* Both use **Pass by Value** and **Pass by Reference**.
+7. **String Pools** vs. **String Interning**
+	* Java using the "flywheel" memoization pattern to automatically handle String deduplication under the hood.
+	* .NET has a similar **String Interning** automatic system within the **Common Language Runtime**.
+	* Both use respective `.intern()` Methods and can be called manually.
+8. Compilation
+	* Java compiles code into bytecode that's executed by the JRE.
+	* .NET has several additional intermediate steps.
+		* *Code is compiled from a target .NET language (F#, C#, etc.).
+		* This in turn is JIT executed on the **Common Language Runtime**.
+			* TODO
+9. Autoboxing
+		
 ### Key Concepts
 
 1. `Program.cs` is the default **Main Method** file and entrypoint for `Console` **Project**. 
@@ -97,9 +141,23 @@ dotnet sln add src
 
 ## Resources and Links
 
+### Interview Preparation
+
 1. https://zerotomastery.io/blog/dot-NET-interview-questions/
 1. https://beetroot.co/team/18-interview-questions-to-ask-a-senior-net-developer/
+
+### Ecosystem
+
 1. https://www.c-sharpcorner.com/article/net-ecosystem/
+
+### Langauge Reference and Documentation
+
+1. https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/program-structure/top-level-statements
+1. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/
+1. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly
+1. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual
+1. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const
+1. https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers
 
 ### Code Samples
 

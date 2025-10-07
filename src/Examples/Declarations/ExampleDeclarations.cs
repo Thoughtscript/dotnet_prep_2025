@@ -7,7 +7,7 @@ namespace ExampleDeclarations
         // https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly
         public readonly string ExampleReadOnlyString = "I'm not the same as a const";
 
-        public static void ExampleVariableDeclarations()
+        public static void Run()
         {
             var ExampleVar = "I'm an implicitly typed local variable";
             Console.WriteLine(ExampleVar);

@@ -107,7 +107,8 @@ dotnet sln add src
 	* In .NET, only `virtual` **Methods** can be.
 2. `struct` vs `record`
 	* `struct` can be deep or shallow.
-	* `struct` can be `readonly`
+	* `struct` can be `readonly`.
+	* `struct` is **Pass by Value**.
 3. `var` 
 	* In Java, this is the default Variable declaration keyword.
 	* In .NET, this is for a locally-scoped Variable declaration (akin to `let` in JavaScript).
@@ -158,6 +159,10 @@ dotnet sln add src
 1. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual
 1. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const
 1. https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers
+
+### Supplemental
+
+1. https://medium.com/@dmitrystadub/c-13-ref-struct-features-overview-e4b91a50afef
 
 ### Code Samples
 

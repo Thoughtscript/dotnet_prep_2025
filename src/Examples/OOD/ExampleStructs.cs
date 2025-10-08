@@ -1,4 +1,4 @@
-namespace ExampleStructs
+namespace ExampleOOD
 {
     class ExampleStructs
     {
@@ -14,8 +14,16 @@ namespace ExampleStructs
             public string X { get; init; }
         }
 
-        // Note that 'ref struct': https://medium.com/@dmitrystadub/c-13-ref-struct-features-overview-e4b91a50afef works bit differently than say 'ref int'
-        // Doesn't give the "address" but allocates onto the Stack not Heap - do this when superfast low overhead is needed!
+        /*
+         * Note that 'ref struct': https://medium.com/@dmitrystadub/c-13-ref-struct-features-overview-e4b91a50afef works bit differently than say 'ref int'
+         * Doesn't give the "address" but allocates onto the Stack not Heap - do this when superfast low overhead is needed!
+         * 
+         * For example: 
+         * 
+         * ref string StringReferenceExample = ref AnotherExampleString;
+         * Console.WriteLine(StringReferenceExample);
+         * 
+         */
 
         public static void Run()
         {

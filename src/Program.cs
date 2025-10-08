@@ -8,13 +8,22 @@
 //var topLevelExample = new { message = "example" };
 //Console.WriteLine(topLevelExample);
 
+using ExampleDeclarations;
+
 namespace Main
 {
     class ApplicationMain
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("test");
+            ExampleArrays.ExampleArrays.Run();
+            ExampleCollections.ExampleCollections.Run();
+
+            ExampleReferences.ExampleReferences.Run();
+            ExampleDeclarations.ExampleDeclarations.Run();
+            ExampleComparisons.ExampleComparisons.Run();
+            
+            ExampleAbstractions.ExampleImplementation.Run();
         }
     }
 }

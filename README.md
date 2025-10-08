@@ -89,56 +89,157 @@ dotnet sln add src
 
 ## Language Overview
 
+### Checklist
+
+- [x] Declarations
+     - [x] const
+     - [x] var
+- [x] Structs
+     - [x] init
+- [x] string 
+     - [x] Interning/Pool
+     - [x] Interpolation
+     - [x] relation to char, a sequence not Array
+     - [x] immutable
+- [x] Visual Studio, .NET Solutions, Projects
+     - [x] Visual Studio
+     - [x] .NET 9
+     - [x] .sln
+     - [x] .csproj
+- [x] Interfaces, Abstraction
+     - [x] Interface, implementation
+     - [x] Abstract
+- [x] Namespaces, Classes
+     - [x] Getter, Setter
+     - [ ] Generics
+     - [x] :
+- [ ] Virtual
+     - [ ] Overridding
+- [ ] System.Collections.Generic
+     - [x] Stack
+     - [ ] PriorityQueue
+     - [x] List
+     - [x] HashSet
+     - [ ] LinkedList
+     - [ ] Dictionary
+     - [ ] sorting
+- [x] Basic Types
+     - [x] Arrays, sorting
+     - [x] struct
+     - [x] int, long, double, float
+     - [x] bool
+     - [x] char, string
+- [ ] Visibility and Access
+     - [x] internal
+     - [x] public
+     - [x] private
+     - [x] protected
+     - [x] file
+     - [ ] private protected
+     - [ ] protected internal
+- [ ] Loops, Iterables
+     - [x] foreach
+     - [ ] async loop
+     - [x] for
+- [x] References
+     - [x] ref on basic types
+     - [x] String, object, no wrapper types
+- [x] Exception Handling, Checked, Runtime
+     - [x] throwing
+     - [x] try, catch
+     - [ ] checked
+     - [ ] unchecked
+- [ ] Algos
+- [x] Compilation, Common Language Runtime
+     - [x] Compilation to MSIL through CLR
+     - [x] Then JIT compilation at execution through CLR
+- [ ] Async
+- [ ] Operators
+     - [x] nullable (`?`, Elvis), null-conditional (`?.`), null-coalescing (`??`), appended.
+     - [x] `is null`, null check
+     - [x] `is string`, type comparions
+- [ ] Other Keyword
+     - [x] Guards
+     - [x] static
+
+### New(er) Features
+
 **Top Level Statements** 
 
 > New in .NET 9.
 
 1. It must be within the entrypoint (`Main` **Method**, `Program.cs` **File** and **Class**).
-1. Eliminates the ceremony of writing a `Program` Class or `Main` **Method**.	 
+2. Eliminates the ceremony of writing a `Program` Class or `Main` **Method**.	 
    * Cannot be used with `Main` **Method**.
    * Only one **File** containing these is allowed per **Project**.
-1. `using` **Directives** must come first.
-1. They cannot be imported/exported.
+3. `using` **Directives** must come first.
+4. They cannot be imported/exported.
 
 ### Vs. Java
 
 1. `virtual` and **Overloading**
 	* In Java, **Methods** can be `@Overridden` by default.
-	* In .NET, only `virtual` **Methods** can be.
+	* In .NET C#, only `virtual` and `abstract` **Methods** can be.
 2. `struct` vs `record`
 	* `struct` can be deep or shallow.
 	* `struct` can be `readonly`.
 	* `struct` is **Pass by Value**.
 3. `var` 
 	* In Java, this is the default Variable declaration keyword.
-	* In .NET, this is for a locally-scoped Variable declaration (akin to `let` in JavaScript).
-	* It's also implicitly typed in .NET (omitting the need to explicitly state the type).
+	* In .NET C#, this is for a locally-scoped Variable declaration (akin to `let` in JavaScript).
+	* It's also implicitly typed in .NET C# (omitting the need to explicitly state the type).
 4. `const` vs. `var static final ...`
 	* In Java, an immutable Variable is defined using the `final` keyword.
 	* In .NET, `const` is used instead (like JavaScript).
 5. Visibility
 	* Java: `public`, `protected`, `package` (default), `private`. Also, `sealed`.
-	* .NET: far more combinations for greater granularity and Access Control.
+	* .NET C#: far more combinations for greater granularity and Access Control.
 		* TODO
 6. Pass by Value and Reference
 	* Both use **Pass by Value** and **Pass by Reference**.
+	* `ref` can be set on most types.
 7. **String Pools** vs. **String Interning**
 	* Java using the "flywheel" memoization pattern to automatically handle String deduplication under the hood.
-	* .NET has a similar **String Interning** automatic system within the **Common Language Runtime**.
+	* .NET C# has a similar **String Interning** automatic system within the **Common Language Runtime**.
 	* Both use respective `.intern()` Methods and can be called manually.
 8. Compilation
 	* Java compiles code into bytecode that's executed by the JRE.
-	* .NET has several additional intermediate steps.
-		* *Code is compiled from a target .NET language (F#, C#, etc.).
+	* .NET C# has several additional intermediate steps.
+        * Code is compiled from a target .NET language (F#, C#, etc.) into MSIL.
 		* This in turn is JIT executed on the **Common Language Runtime**.
-			* TODO
 9. Autoboxing
+    * Unlike Java, `string` and `String` are the same. `string` is an alias for `System.String` and the behavior, properties, etc. of `String` are there defined.
+    * `int` and `Integer` are distinct in Java but aren't in .NET. They are aliases to the same (specifically, `System.Int32`).
+    * In .NET C# a `string` say can be "boxed" into an `object` and back but this isn't the same relationship as `int` to `Integer` in Java.
+    * For example, neither `int` nor `System.Int32` are nullable in .NET without `?` appended.
+10. Types
+	* Value types (primitives, pass by **Pass by Value**)
+	* Reference types include **Classes**, **Interfaces**, **Arrays**, etc.
+	* Like Java, Strings aren't primitives (e.g. - "value types") in C#.
+11. `extends` vs. `:`
+	* .NET C# uses `:` (vs. `extends` in Java).
+	* Also for `implements`.
+12. **Abstract Classes** and **Interfaces**
+    * Similar
+13. Nullability
+    * Value (primitive) types typically can't be set to null directly.
+    * `?` can be appended to most type declarations to make it explicitly nullable (`int?`, `string?` will complain but not error since `string` is a Reference Type).
+14. Array Sorting
+    * Java `Arrays.sort()` 
+    * .NET `Array.Sort()`
+15. Collections
+    * Collections API in Java
+    * `System.Collections.Generic` in .NET C#
+16. Object
+    * `object` is an alias for `System.Object`.
 		
 ### Key Concepts
 
 1. `Program.cs` is the default **Main Method** file and entrypoint for `Console` **Project**. 
 	* This will be created - expect it.
 	* It doesn't have to have a **Class** definition.
+2. Compilation is a bit more involved.
+    * .NET C# involves multiple languages that compile from a target language (MSIL) down into JIT CLR at execution runtime.
 
 ## Resources and Links
 
@@ -159,6 +260,7 @@ dotnet sln add src
 1. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual
 1. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const
 1. https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers
+1. https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties
 
 ### Supplemental
 

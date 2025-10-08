@@ -44,6 +44,14 @@ namespace ExampleAsync
             // t.Start();
             // Not needed here
 
+            /*
+             * Promise.all(array) equivalent:
+             *  
+             *   List<Task> l = new List<Task>();
+             *   Task.WaitAll(l); // blocking
+             *   Task.WhenAll(l); //non-blocking
+             */
+
             try
             {
                 await t;

@@ -25,6 +25,7 @@ namespace Main
             
             ExampleAbstractions.ExampleImplementation.Run();
             ExampleOOD.ExampleSubClass.Run();
+            ExampleOOD.ExampleGenerics.Run();
 
             ExampleAsync.ExampleTasks.Run();
         }

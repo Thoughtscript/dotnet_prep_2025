@@ -138,9 +138,9 @@ dotnet sln add src
      - [x] file
      - [ ] private protected
      - [ ] protected internal
-- [ ] Loops, Iterables
+- [x] Loops, Iterables
      - [x] foreach
-     - [ ] async loop
+     - [x] async loop - see: https://learn.microsoft.com/en-us/answers/questions/1046784/c-async-streams-when-to-use-await-before-foreach
      - [x] for
 - [x] References
      - [x] ref on basic types
@@ -277,6 +277,7 @@ dotnet sln add src
 ### Supplemental
 
 1. https://medium.com/@dmitrystadub/c-13-ref-struct-features-overview-e4b91a50afef
+2. https://learn.microsoft.com/en-us/answers/questions/1046784/c-async-streams-when-to-use-await-before-foreach
 
 ### Code Samples
 

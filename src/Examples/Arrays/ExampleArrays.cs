@@ -15,6 +15,10 @@ namespace ExampleArrays
                 {
                     Console.WriteLine("Array -> " + ExampleArray[i]);
                 }
+
+                string[] AnotherExampleArray = { "d", "c", "a", "b" };
+
+                Console.WriteLine(Array.Equals(ExampleArray, AnotherExampleArray));
             }
             catch (Exception ex)
             {

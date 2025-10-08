@@ -24,6 +24,9 @@ namespace Main
             ExampleComparisons.ExampleComparisons.Run();
             
             ExampleAbstractions.ExampleImplementation.Run();
+            ExampleOOD.ExampleSubClass.Run();
+
+            ExampleAsync.ExampleTasks.Run();
         }
     }
 }

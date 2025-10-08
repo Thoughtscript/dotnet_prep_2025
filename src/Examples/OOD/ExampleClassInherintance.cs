@@ -16,17 +16,34 @@ namespace ExampleOOD
             get { return _BackingString; }
             set => _BackingString = value; 
         }
+
+        private int _num;
+        public virtual int VirtualNumber // is implemented unlike abstract
+        // but can be overridden
+        {
+            get { return _num; }
+            set { _num = value; }
+        }
     }
 
     class ExampleSubClass: ExampleSuperClass
     {
+        private int _num;
+        public override int VirtualNumber 
+        {
+            get { return _num + 1; }
+            set { _num = value; }
+        }
+
         public static void Run()
         {
+            Console.WriteLine("============== ExampleSubClass ==============");
 
             ExampleSubClass A = new ExampleSubClass();
             Console.WriteLine(A.PublicInt);
             A.PublicString = "A";
             Console.WriteLine(A.PublicString);
+            Console.WriteLine(A.VirtualNumber);
         }
     }
 }

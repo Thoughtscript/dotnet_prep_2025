@@ -18,8 +18,17 @@ namespace ExampleCollections
             ExampleList.ForEach(a => Console.WriteLine(a)); // lambda
             ExampleList.RemoveAt(0);
 
+            // Sorting
+            ExampleList.Reverse();
             // foreach equivalent
-            foreach(string ExampleString in ExampleList)
+            foreach (string ExampleString in ExampleList)
+            {
+                Console.WriteLine(ExampleString);
+            }
+
+            ExampleList.Sort();
+            // foreach equivalent
+            foreach (string ExampleString in ExampleList)
             {
                 Console.WriteLine(ExampleString);
             }
@@ -30,6 +39,7 @@ namespace ExampleCollections
             ExampleSet.Add("Set -> B");
             ExampleSet.RemoveWhere(a => String.Equals(a, "A"));
             Console.WriteLine(ExampleSet.ToString()); // Doesn't print members
+            Console.WriteLine(ExampleSet.Count); // Not Size, Length, or Count()
 
             foreach (string ExampleString in ExampleSet)
             {
@@ -54,6 +64,33 @@ namespace ExampleCollections
             for (int i = 0; i < ExampleArray.Length; i++)
             {
                 Console.WriteLine("Array -> " + ExampleArray[i]);
+            }
+
+            Dictionary<string, string> ExampleMap = new Dictionary<string, string>();
+            // No Put, can't Add over.
+            // Remove
+            ExampleMap.Add("KeyA", "Dict -> ValA");
+            ExampleMap.Remove("KeyA");
+
+            ExampleMap.Add("KeyA", "Dict -> ValA");
+            ExampleMap.Add("KeyB", "Dict -> ValB");
+
+            string? found;
+            if (ExampleMap.TryGetValue("KeyA", out found))
+            {
+                Console.WriteLine(found);
+            }
+            else
+            {
+                Console.WriteLine("NOT FOUND");
+            }
+
+            // Key sort
+            List<string> Keys = ExampleMap.Keys.ToList();
+            Keys.Sort((a, b) => a.CompareTo(b));
+            for (int i = 0; i < Keys.Count; i++)
+            {
+                Console.WriteLine("Key List -> " + Keys[i]);
             }
         }
     }

@@ -113,16 +113,17 @@ dotnet sln add src
      - [x] Getter, Setter
      - [ ] Generics
      - [x] :
-- [ ] Virtual
-     - [ ] Overridding
+- [x] Virtual
+     - [x] implemented, can `override`
+     - [x] vs. `abstract` - unimplemented, must `override`
 - [ ] System.Collections.Generic
      - [x] Stack
      - [ ] PriorityQueue
      - [x] List
      - [x] HashSet
      - [ ] LinkedList
-     - [ ] Dictionary
-     - [ ] sorting
+     - [x] Dictionary
+     - [x] sorting
 - [x] Basic Types
      - [x] Arrays, sorting
      - [x] struct
@@ -153,7 +154,10 @@ dotnet sln add src
 - [x] Compilation, Common Language Runtime
      - [x] Compilation to MSIL through CLR
      - [x] Then JIT compilation at execution through CLR
-- [ ] Async
+- [x] Async
+	 - [x] Task, Thread
+	 - [x] Thread safety
+	 - [x] Non-Blocking to Blocking, composition
 - [ ] Operators
      - [x] nullable (`?`, Elvis), null-conditional (`?.`), null-coalescing (`??`), appended.
      - [x] `is null`, null check
@@ -232,6 +236,14 @@ dotnet sln add src
     * `System.Collections.Generic` in .NET C#
 16. Object
     * `object` is an alias for `System.Object`.
+17. Sort
+	* `(a, b) => a - b`
+	* vs. ` (a,b) => a.CompareTo(b)` in .NET C#.
+18. Length, Size, Count
+    * `Length` is C# String
+    * `Count` is used for C# Collections.
+19. Thread Safety
+    * Unlike Java, there aren't Atomic Objects. Instead, one uses Mutex's and Locks to control access to a Variable by multiple Threads.
 		
 ### Key Concepts
 

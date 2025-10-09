@@ -61,7 +61,6 @@ The steps in the section below will setup and configure a new **Solution** from 
 1. One can open and navigate to the **Solution** file (`.sln`).
 1. Then **Build** and **Run** the **Solution** from within **Visual Studio 2022**.
 
-
 ### CLI Commands
 
 From within **Visual Studio** (using the steps above):
@@ -111,7 +110,7 @@ dotnet sln add src
      - [x] Abstract
 - [x] Namespaces, Classes
      - [x] Getter, Setter
-     - [ ] Generics
+     - [x] Generics
      - [x] :
 - [x] Virtual
      - [x] implemented, can `override`

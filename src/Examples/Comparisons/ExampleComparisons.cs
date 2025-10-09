@@ -19,6 +19,9 @@
 
             Console.WriteLine(String.Equals(ExampleNullString, null));
             Console.WriteLine(ExampleNullString == null);
+
+            bool ReferentialCheck = Object.ReferenceEquals(ExampleNullString, ExampleNullString);
+            Console.WriteLine(ReferentialCheck);
         }
     }
 }

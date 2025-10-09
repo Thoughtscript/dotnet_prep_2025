@@ -8,7 +8,7 @@
 //var topLevelExample = new { message = "example" };
 //Console.WriteLine(topLevelExample);
 
-using ExampleDeclarations;
+using ExampleVisibility;
 
 namespace Main
 {
@@ -26,8 +26,12 @@ namespace Main
             ExampleAbstractions.ExampleImplementation.Run();
             ExampleOOD.ExampleSubClass.Run();
             ExampleOOD.ExampleGenerics.Run();
+            Visibilities exampleVisibility = new Visibilities();
+            exampleVisibility.Run();
 
             ExampleAsync.ExampleTasks.Run();
+
+            CustomEvents.EventExample.Run();
         }
     }
 }

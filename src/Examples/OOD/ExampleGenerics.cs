@@ -32,7 +32,7 @@ namespace ExampleOOD
 
             public override string ToString()
             {
-                return $"[V:{this._value} L:{(this._left is null ? "null" : this._left?.ToString())} R:{(this._right is null ? "null" : this._rightc?.ToString())}]";
+                return $"[V:{this._value} L:{(this._left is null ? "null" : this._left?.ToString())} R:{(this._right is null ? "null" : this._right?.ToString())}]";
             }
         }
 

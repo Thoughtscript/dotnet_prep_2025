@@ -34,7 +34,7 @@ namespace ExampleDeclarations
 
             // CS8600 - Converting null literal or possible null value to non-nullable type
             String ALastExampleString = null; // This will compile and will boxed to string? apparently
-            Console.WriteLine("I'm a nullable stringc " + ALastExampleString);
+            Console.WriteLine("I'm a nullable string " + ALastExampleString);
 
             //System.Int32 ExampleInteger = null; // Difference between Java and C#, this isn't a Wrapper/Reference Type that can be nullable.
             // int and System.Int32 are aliases

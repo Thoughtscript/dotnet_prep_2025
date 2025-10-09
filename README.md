@@ -55,6 +55,9 @@
 	* **View** > **Solution Explorer**
 	* Select the **Show All Files** icon on the right (three papers) to see all Directories and Files (including empty ones).
 
+To format code:
+1. **Edit** > **Advanced** > **Format Document**.
+
 #### Use
 
 The steps in the section below will setup and configure a new **Solution** from scratch.

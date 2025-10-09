@@ -228,18 +228,18 @@ dotnet sln add src
     * Value (primitive) types typically can't be set to null directly.
     * `?` can be appended to most type declarations to make it explicitly nullable (`int?`, `string?` will complain but not error since `string` is a Reference Type).
 14. Array Sorting
-    * Java `Arrays.sort()` 
-    * .NET `Array.Sort()`
+    * Java `Arrays.sort()`.
+    * .NET `Array.Sort()`.
 15. Collections
-    * Collections API in Java
-    * `System.Collections.Generic` in .NET C#
+    * Collections API in Java.
+    * `System.Collections.Generic` in .NET C#.
 16. Object
     * `object` is an alias for `System.Object`.
 17. Sort
 	* `(a, b) => a - b`
 	* vs. ` (a,b) => a.CompareTo(b)` in .NET C#.
 18. Length, Size, Count
-    * `Length` is C# String
+    * `Length` is C# String.
     * `Count` is used for C# Collections.
 19. Thread Safety
     * Unlike Java, there aren't Atomic Objects. Instead, one uses Mutex's and Locks to control access to a Variable by multiple Threads.

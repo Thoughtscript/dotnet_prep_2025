@@ -135,8 +135,8 @@ dotnet sln add src
      - [x] private
      - [x] protected
      - [x] file
-     - [ ] private protected
-     - [ ] protected internal
+     - [x] private protected
+     - [x] protected internal
 - [x] Loops, Iterables
      - [x] foreach
      - [x] async loop - see: https://learn.microsoft.com/en-us/answers/questions/1046784/c-async-streams-when-to-use-await-before-foreach

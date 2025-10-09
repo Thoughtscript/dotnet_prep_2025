@@ -129,7 +129,7 @@ dotnet sln add src
      - [x] int, long, double, float
      - [x] bool
      - [x] char, string
-- [ ] Visibility and Access
+- [x] Visibility and Access
      - [x] internal
      - [x] public
      - [x] private

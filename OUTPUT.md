@@ -26,11 +26,20 @@ Array -> Stack -> C
 Dict -> ValA
 Key List -> KeyA
 Key List -> KeyB
+============== BasicAlgos ==============
+6727-1
+Test case 56127: PASSED
+-1-1-1-1-1
+Test case 54321: PASSED
+2345-1
+Test case 12345: PASSED
+2334-1
+Test case 12234: PASSED
 ============== ExampleReferences ==============
--1498319756
-1697109788
+-424893558
+-38117650
 I'm a string
-1697109788
+-38117650
 I'm another string
 I'm another string
 True

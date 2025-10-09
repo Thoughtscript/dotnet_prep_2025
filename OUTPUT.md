@@ -26,7 +26,7 @@ Array -> Stack -> C
 Dict -> ValA
 Key List -> KeyA
 Key List -> KeyB
-============== BasicAlgos ==============
+============== BasicAlgos > NextHighest ==============
 6727-1
 Test case 56127: PASSED
 -1-1-1-1-1
@@ -35,11 +35,22 @@ Test case 54321: PASSED
 Test case 12345: PASSED
 2334-1
 Test case 12234: PASSED
+============== BasicAlgos > NextLowest ==============
+11-1-1-1
+Test case 56127: PASSED
+4321-1
+Test case 54321: PASSED
+-1-1-1-1-1
+Test case 12345: PASSED
+-1-1-1-1-1
+Test case 12234: PASSED
+-1111-1
+Test case 12331: PASSED
 ============== ExampleReferences ==============
--424893558
--38117650
+1042638314
+1575317512
 I'm a string
--38117650
+1575317512
 I'm another string
 I'm another string
 True

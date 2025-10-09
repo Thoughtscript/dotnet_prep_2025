@@ -18,7 +18,8 @@ namespace Main
         {
             ExampleArrays.ExampleArrays.Run();
             ExampleCollections.ExampleCollections.Run();
-            ExampleCollections.ExampleStacksAndQueues.Run();
+            ExampleCollections.ExampleStacksAndQueues.RunNextHighest();
+            ExampleCollections.ExampleStacksAndQueues.RunNextLowest();
 
             ExampleReferences.ExampleReferences.Run();
             ExampleDeclarations.ExampleDeclarations.Run();

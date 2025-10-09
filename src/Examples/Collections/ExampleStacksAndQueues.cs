@@ -55,9 +55,45 @@ namespace ExampleCollections
             return pass;
         }
 
-        public static void Run()
+        // https://www.geeksforgeeks.org/problems/immediate-smaller-element1142/1 - Medium - 20 Minutes Amazon, solved in 3 Minutes I think first time maybe not.
+        private static bool NextLowest(List<int> input, List<int> expected)
         {
-            Console.WriteLine("============== BasicAlgos ==============");
+            List<int> result = new List<int>();
+            Stack<int> stack = new Stack<int>();
+
+            for (int i = 0; i < input.Count; i++)
+            {
+                result.Add(-1);
+            }
+
+            // Going from R to L - probably easiest way to do these - remember!!
+            for (int i = input.Count - 1; i >= 0; i--)
+            {
+                int N = input[i];
+
+                while (stack.Count > 0 && stack.Peek() >= N)
+                {
+                    stack.Pop();
+                    // Our unshift() going from L to R
+                }
+
+                if (stack.Count > 0)
+                {
+                    result[i] = stack.Peek();
+                }
+
+                stack.Push(N);
+            }
+
+            Console.WriteLine($"{Print(result)}");
+            bool pass = Enumerable.SequenceEqual(result, expected);
+            Console.WriteLine($"Test case {(Print(input))}: {(pass ? "PASSED" : "FAILED")}");
+            return pass;
+        }
+
+        public static void RunNextHighest()
+        {
+            Console.WriteLine("============== BasicAlgos > NextHighest ==============");
 
             List<int> testA = new List<int>();
             testA.Add(5);
@@ -114,6 +150,81 @@ namespace ExampleCollections
             expectedD.Add(4);
             expectedD.Add(-1);
             NextHighest(testD, expectedD);
+        }
+
+        public static void RunNextLowest()
+        {
+            Console.WriteLine("============== BasicAlgos > NextLowest ==============");
+
+            List<int> testA = new List<int>();
+            testA.Add(5);
+            testA.Add(6);
+            testA.Add(1);
+            testA.Add(2);
+            testA.Add(7);
+            List<int> expectedA = new List<int>();
+            expectedA.Add(1);
+            expectedA.Add(1);
+            expectedA.Add(-1);
+            expectedA.Add(-1);
+            expectedA.Add(-1);
+            NextLowest(testA, expectedA);
+
+            List<int> testB = new List<int>();
+            testB.Add(5);
+            testB.Add(4);
+            testB.Add(3);
+            testB.Add(2);
+            testB.Add(1);
+            List<int> expectedB = new List<int>();
+            expectedB.Add(4);
+            expectedB.Add(3);
+            expectedB.Add(2);
+            expectedB.Add(1);
+            expectedB.Add(-1);
+            NextLowest(testB, expectedB);
+
+            List<int> testC = new List<int>();
+            testC.Add(1);
+            testC.Add(2);
+            testC.Add(3);
+            testC.Add(4);
+            testC.Add(5);
+            List<int> expectedC = new List<int>();
+            expectedC.Add(-1);
+            expectedC.Add(-1);
+            expectedC.Add(-1);
+            expectedC.Add(-1);
+            expectedC.Add(-1);
+            NextLowest(testC, expectedC);
+
+            List<int> testD = new List<int>();
+            testD.Add(1);
+            testD.Add(2);
+            testD.Add(2);
+            testD.Add(3);
+            testD.Add(4);
+            List<int> expectedD = new List<int>();
+            expectedD.Add(-1);
+            expectedD.Add(-1);
+            expectedD.Add(-1);
+            expectedD.Add(-1);
+            expectedD.Add(-1);
+            NextLowest(testD, expectedD);
+
+            List<int> testE = new List<int>();
+            testE.Add(1);
+            testE.Add(2);
+            testE.Add(3);
+            testE.Add(3);
+            testE.Add(1);
+            List<int> expectedE = new List<int>();
+            expectedE.Add(-1);
+            expectedE.Add(1);
+            expectedE.Add(1);
+            expectedE.Add(1);
+            expectedE.Add(-1);
+            NextLowest(testE, expectedE);
         }
     }
 }

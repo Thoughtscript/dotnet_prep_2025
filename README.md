@@ -118,12 +118,12 @@ dotnet sln add src
 - [x] Virtual
      - [x] implemented, can `override`
      - [x] vs. `abstract` - unimplemented, must `override`
-- [ ] System.Collections.Generic
+- [x] System.Collections.Generic
      - [x] Stack
-     - [ ] PriorityQueue
+     - [x] PriorityQueue
      - [x] List
      - [x] HashSet
-     - [ ] LinkedList
+     - [x] LinkedList
      - [x] Dictionary
      - [x] sorting
 - [x] Basic Types
@@ -146,6 +146,7 @@ dotnet sln add src
      - [x] for
 - [x] References
      - [x] ref on basic types
+     - [x] delegate on methods
      - [x] String, object, no wrapper types
 - [x] Exception Handling, Checked, Runtime
      - [x] throwing
@@ -153,6 +154,9 @@ dotnet sln add src
      - [ ] checked
      - [ ] unchecked
 - [ ] Algos
+    - [ ] Stack
+    - [ ] List
+    - [ ] Arrays
 - [x] Compilation, Common Language Runtime
      - [x] Compilation to MSIL through CLR
      - [x] Then JIT compilation at execution through CLR
@@ -164,9 +168,13 @@ dotnet sln add src
      - [x] nullable (`?`, Elvis), null-conditional (`?.`), null-coalescing (`??`), appended.
      - [x] `is null`, null check
      - [x] `is string`, type comparions
-- [ ] Other Keyword
+- [x] Other Keyword
      - [x] Guards
      - [x] static
+     - [x] ref
+     - [x] virtual
+     - [x] delegate
+     - [x] volatile
 
 ### New(er) Features
 
@@ -204,6 +212,7 @@ dotnet sln add src
 6. Pass by Value and Reference
 	* Both use **Pass by Value** and **Pass by Reference**.
 	* `ref` can be set on most types.
+	* `delegate` is similar to `ref` but used for **Method**/**Function References**.
 7. **String Pools** vs. **String Interning**
 	* Java using the "flywheel" memoization pattern to automatically handle String deduplication under the hood.
 	* .NET C# has a similar **String Interning** automatic system within the **Common Language Runtime**.

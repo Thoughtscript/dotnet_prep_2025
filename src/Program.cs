@@ -34,6 +34,8 @@ namespace Main
             ExampleAsync.ExampleTasks.Run();
 
             CustomEvents.EventExample.Run();
+
+            ExampleFun.Fun.Run();
         }
     }
 }

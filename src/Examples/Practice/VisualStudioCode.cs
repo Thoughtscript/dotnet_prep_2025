@@ -34,10 +34,14 @@ namespace ExampleFun
             A.Add("Hello!");
             A.Add("Goodbye!");
 
-            foreach(string item in A)
+            foreach (string item in A)
             {
                 Console.WriteLine(item);
             }
+
+            Stack<int> myStack = new Stack<int>();
+            myStack.Push(1); // Visual Studio Code has great code completion/API Method lookups for C#!!
+            // Visual Studio's gotten much better too and I prefer it's functionality overall.
         }
     }
 }

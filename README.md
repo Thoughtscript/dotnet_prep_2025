@@ -118,6 +118,7 @@ dotnet sln add src
      - [x] Interface, implementation
      - [x] Abstract
 - [x] Namespaces, Classes
+     - [x] `: base()`
      - [x] Getter, Setter
      - [x] Generics
      - [x] :

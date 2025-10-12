@@ -263,6 +263,9 @@ dotnet sln add src
     * Unlike Java, there aren't Atomic Objects. Instead, one uses Mutex's and Locks to control access to a Variable by multiple Threads.
 20. `&&` and `||`
     * Same "circuit breaker" conditional evaluation (left to right) in both.
+21. `super` vs. `base`
+     * `super()` in Java
+     * `base()` in C# - this is typically called like so: `public SubClassConstructor(int i) : base(i) {}`
 		
 ### Key Concepts
 
@@ -292,6 +295,7 @@ dotnet sln add src
 1. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const
 1. https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers
 1. https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties
+1. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/base
 
 ### Supplemental
 

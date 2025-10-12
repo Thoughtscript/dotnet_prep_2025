@@ -251,8 +251,8 @@ dotnet sln add src
 	* `(a, b) => a - b`
 	* vs. ` (a,b) => a.CompareTo(b)` in .NET C#.
 18. Length, Size, Count
-    * `Length` is C# String.
-    * `Count` is used for C# Collections.
+    * `Length` is C# String and Array (akin to `.length`).
+    * `Count` is used for C# Collections (not `.size()`).
 19. Thread Safety
     * Unlike Java, there aren't Atomic Objects. Instead, one uses Mutex's and Locks to control access to a Variable by multiple Threads.
 20. `&&` and `||`

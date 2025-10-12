@@ -151,11 +151,11 @@ dotnet sln add src
 - [x] Exception Handling, Checked, Runtime
      - [x] throwing
      - [x] try, catch
-     - [ ] checked
-     - [ ] unchecked
+     - [x] checked exceptions
+     - [x] unchecked exceptions
 - [ ] Algos
-    - [ ] Stack
-    - [ ] List
+    - [x] Stack
+    - [x] List
     - [ ] Arrays
 - [x] Compilation, Common Language Runtime
      - [x] Compilation to MSIL through CLR
@@ -164,7 +164,7 @@ dotnet sln add src
 	 - [x] Task, Thread
 	 - [x] Thread safety
 	 - [x] Non-Blocking to Blocking, composition
-- [ ] Operators
+- [x] Operators
      - [x] nullable (`?`, Elvis), null-conditional (`?.`), null-coalescing (`??`), appended.
      - [x] `is null`, null check
      - [x] `is string`, type comparions
@@ -255,6 +255,8 @@ dotnet sln add src
     * `Count` is used for C# Collections.
 19. Thread Safety
     * Unlike Java, there aren't Atomic Objects. Instead, one uses Mutex's and Locks to control access to a Variable by multiple Threads.
+20. `&&` and `||`
+    * Same "circuit breaker" conditional evaluation (left to right) in both.
 		
 ### Key Concepts
 

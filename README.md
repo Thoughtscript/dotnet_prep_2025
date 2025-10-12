@@ -267,6 +267,9 @@ dotnet sln add src
 21. `super` vs. `base`
      * `super()` in Java
      * `base()` in C# - this is typically called like so: `public SubClassConstructor(int i) : base(i) {}`
+22. Default Sorting
+     * mergesort, quicksort in Java
+     * heapsort, quicksort in C#
 		
 ### Key Concepts
 
@@ -297,11 +300,12 @@ dotnet sln add src
 1. https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers
 1. https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties
 1. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/base
+1. https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.sort?view=net-9.0
 
 ### Supplemental
 
 1. https://medium.com/@dmitrystadub/c-13-ref-struct-features-overview-e4b91a50afef
-2. https://learn.microsoft.com/en-us/answers/questions/1046784/c-async-streams-when-to-use-await-before-foreach
+1. https://learn.microsoft.com/en-us/answers/questions/1046784/c-async-streams-when-to-use-await-before-foreach
 
 ### Code Samples
 

@@ -58,6 +58,12 @@
 To format code:
 1. **Edit** > **Advanced** > **Format Document**.
 
+In Visual Studio Code:
+1. To create a new **Project**:
+   * **Command Palette** > type `.NET: New Project`
+2. To format code:
+   * **Command Palette** > type `Format Document`
+
 #### Use
 
 The steps in the section below will setup and configure a new **Solution** from scratch.

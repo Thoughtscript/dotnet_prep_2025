@@ -306,6 +306,7 @@ dotnet sln add src
 
 1. https://medium.com/@dmitrystadub/c-13-ref-struct-features-overview-e4b91a50afef
 1. https://learn.microsoft.com/en-us/answers/questions/1046784/c-async-streams-when-to-use-await-before-foreach
+1. https://www.geeksforgeeks.org/c-sharp/c-priorityqueue/
 
 ### Code Samples
 

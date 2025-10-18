@@ -200,7 +200,7 @@ dotnet sln add src
 
 1. `virtual` and **Overloading**
 	* In Java, **Methods** can be `@Overridden` by default.
-	* In .NET C#, only `virtual` and `abstract` **Methods** can be.
+	* In .NET C#, only `virtual`, `abstract`, and other `override` **Methods** can be.
 2. `struct` vs `record`
 	* `struct` can be deep or shallow.
 	* `struct` can be `readonly`.

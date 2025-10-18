@@ -160,10 +160,10 @@ dotnet sln add src
      - [x] try, catch
      - [x] checked exceptions
      - [x] unchecked exceptions
-- [ ] Algos
+- [x] Algos
     - [x] Stack
     - [x] List
-    - [ ] Arrays
+    - [x] Arrays
 - [x] Compilation, Common Language Runtime
      - [x] Compilation to MSIL through CLR
      - [x] Then JIT compilation at execution through CLR
@@ -215,7 +215,6 @@ dotnet sln add src
 5. Visibility
 	* Java: `public`, `protected`, `package` (default), `private`. Also, `sealed`.
 	* .NET C#: far more combinations for greater granularity and Access Control.
-		* TODO
 6. Pass by Value and Reference
 	* Both use **Pass by Value** and **Pass by Reference**.
 	* `ref` can be set on most types.
@@ -301,6 +300,7 @@ dotnet sln add src
 1. https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties
 1. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/base
 1. https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.sort?view=net-9.0
+1. https://learn.microsoft.com/en-us/dotnet/csharp/linq/get-started/write-linq-queries
 
 ### Supplemental
 

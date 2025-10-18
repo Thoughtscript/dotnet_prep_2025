@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\_active\\dotnet_prep_2025\\src\\src.csproj": {}
+    "G:\\_2025_core_examples\\dotnet_prep_2025\\src\\src.csproj": {}
   },
   "projects": {
-    "G:\\_active\\dotnet_prep_2025\\src\\src.csproj": {
+    "G:\\_2025_core_examples\\dotnet_prep_2025\\src\\src.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\_active\\dotnet_prep_2025\\src\\src.csproj",
+        "projectUniqueName": "G:\\_2025_core_examples\\dotnet_prep_2025\\src\\src.csproj",
         "projectName": "src",
-        "projectPath": "G:\\_active\\dotnet_prep_2025\\src\\src.csproj",
+        "projectPath": "G:\\_2025_core_examples\\dotnet_prep_2025\\src\\src.csproj",
         "packagesPath": "C:\\Users\\adami\\.nuget\\packages\\",
-        "outputPath": "G:\\_active\\dotnet_prep_2025\\src\\obj\\",
+        "outputPath": "G:\\_2025_core_examples\\dotnet_prep_2025\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\adami\\AppData\\Roaming\\NuGet\\NuGet.Config",

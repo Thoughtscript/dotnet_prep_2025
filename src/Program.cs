@@ -31,6 +31,8 @@ namespace Main
             Visibilities exampleVisibility = new Visibilities();
             exampleVisibility.Run();
 
+            ExampleQueries.ExampleLINQQueries.Run();
+
             ExampleAsync.ExampleTasks.Run();
 
             CustomEvents.EventExample.Run();

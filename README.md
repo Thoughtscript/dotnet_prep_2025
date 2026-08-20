@@ -216,7 +216,7 @@ dotnet sln add src
 	* Java: `public`, `protected`, `package` (default), `private`. Also, `sealed`.
 	* .NET C#: far more combinations for greater granularity and Access Control.
 6. Pass by Value and Reference
-	* Both use **Pass by Value** and **Pass by Reference**.
+	* Both use **Pass by Value** and **Pass by Reference**. (*-ish*, Java has a quirky system described [here](https://render-static-fs.onrender.com/study_guide_notes_2023.java.html#java-references).)
 	* `ref` can be set on most types.
 	* `delegate` is similar to `ref` but used for **Method**/**Function References**.
 7. **String Pools** vs. **String Interning**
